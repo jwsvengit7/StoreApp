@@ -1,25 +1,24 @@
 package ClassPackage;
 
+
 public class Product {
-    private String productName;
-
+    private String name;
     private float price;
-    private int quantity;
-    private int totalPrice;
+    private int quatity;
 
-    public Product(String productName, float price, int quantity, int totalPrice) {
-        this.productName = productName;
+    public Product(String name, float price, int quatity) {
+        this.name = name;
         this.price = price;
-        this.quantity = quantity;
-        this.totalPrice = totalPrice;
+        this.quatity = quatity;
+    }
+    public Product(){}
+    public String getName() {
+        return name;
     }
 
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public String setName(String name) {
+        this.name = name;
+        return name;
     }
 
     public float getPrice() {
@@ -30,19 +29,24 @@ public class Product {
         this.price = price;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getQuatity() {
+        return quatity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuatity(int quatity) {
+        this.quatity = quatity;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", quatity=" + quatity +
+                '}';
     }
 
-    public void setTotalPrice(int totalPrice,int quantity) {
-        this.totalPrice = totalPrice * quantity;
-    }
+
+
+
 }

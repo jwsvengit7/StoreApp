@@ -1,5 +1,6 @@
 package InterfacePackage;
+import ClassPackage.Product;
 
 public interface CustomerInferface {
-    public String buyProduct();
+    public String CustomerBuy(Product seller);
 }

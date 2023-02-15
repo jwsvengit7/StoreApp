@@ -1,20 +1,19 @@
 package ClassPackage;
 
- public class Staff {
+
+import java.util.List;
+
+public abstract class Staff {
     private String name;
     private int id;
-    private String email;
-    private String adresss;
-    private Staffs position;
 
-    public Staff(String name, int id, String email, String adresss, Staffs position) {
+
+    public Staff(String name, int id) {
         this.name = name;
         this.id = id;
-        this.email = email;
-        this.adresss = adresss;
-        this.position = position;
+
     }
-    public Staff() {
+    public Staff(){
         super();
     }
 
@@ -34,33 +33,16 @@ package ClassPackage;
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+
+
+    public abstract int Fire(List<Cashier> cashier);
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+
+                '}';
     }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAdresss() {
-        return adresss;
-    }
-
-    public void setAdresss(String adresss) {
-        this.adresss = adresss;
-
-    }
-
-    public Staffs getPosition() {
-        return position;
-    }
-
-    public void setPosition(Staffs position) {
-        this.position = position;
-    }
-
-
-
-
 }
-
